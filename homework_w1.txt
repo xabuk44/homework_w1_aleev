@@ -1,0 +1,24 @@
+wall_length = int(input('Enter wall length: '))
+wall_width = float(input('Enter wall width: '))
+wall_height = float(input('Enter wall height: ')) + 0.1
+#print(wall_height)
+room_perimetr = (wall_length + wall_width) * 2
+#print(room_perimetr)
+wallpaper_width = float(input('Enter wallpaper width: '))
+cloth_quantity = round(room_perimetr / wallpaper_width) #округление нужно сделать до максимума
+#rint(cloth_quantity)
+wallpaper_length = float (input('Enter wallpaper lenght: '))
+cloth_in_one_roll = int(wallpaper_length / wall_height)
+#print(cloth_in_one_roll)
+
+roll_quantity = (cloth_quantity / cloth_in_one_roll) + 1
+print(roll_quantity)
+
+
+fuel_consumption_mid = int(input('Enter fuel consumption per 100 km: '))
+fuel_consumption_1km = fuel_consumption_mid / 100
+fuel = int(input('Enter fuel value: '))
+fuel_range = fuel / fuel_consumption_1km
+print(round(fuel_range))
+if fuel_range < 40:
+    print('Attention! Low fuel!')
